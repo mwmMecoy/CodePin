@@ -8,3 +8,8 @@ h1{
 .not{
     text-decoration: underline;
 }
+
+/* has to be on code snippets to keep line breaks and indentions */
+.wrapCode {
+    white-space: pre-wrap;
+}
