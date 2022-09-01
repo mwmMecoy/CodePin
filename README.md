@@ -1,6 +1,6 @@
 # Introduction
 
-CodePin is built using the MVC Architecture, code users of all types can sign up and use CodePin to store their useful snippets of code on their profile. 
+CodePin is built using the MVC Architecture, anyone can sign up and use CodePin to store useful snippets of code on their profile. 
 
 ---
 
