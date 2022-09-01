@@ -6,7 +6,7 @@ CodePin is built using the MVC Architecture, code users of all types can sign up
 
 # Objectives
 
-- It's a beginner level app created to understand how MVC concept and logins are added
+- An easy-use app with login authentication designed to be an easy way to store, and eventually share, useful or unique pieces of code.
 
 ---
 
@@ -24,9 +24,9 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 
 # Future feature goals
 
-- Create a `.env` file and add the following as `key: value` 
-- PORT: 2121 (can be any port example: 3000) 
-- DB_STRING: `your database URI` 
+- Filtering options to view code of only specific languages.
+- A view where all posts can be viewed and potentially favorited to see on your own profile.
+- Make it look pretty 🌼
  ---
  
  Have fun testing it! 😎
