@@ -1,10 +1,6 @@
 # Introduction
 
-A Simple ToDo App is built using the MVC Architecture, we have also implemented "authorization" so folx can sign up, customize & personalize the app 
-
----
-
-> Be sure to add that lovely star 😀 and fork it for your own copy
+CodePin is built using the MVC Architecture, code users of all types can sign up and use CodePin to store their useful snippets of code on their profile. 
 
 ---
 
@@ -16,7 +12,7 @@ A Simple ToDo App is built using the MVC Architecture, we have also implemented 
 
 # Who is this for? 
 
-- It's for beginners & intermediates with little more experience, to help understand the various aspects of building a node app with some complex features
+- Anyone from a new coder all the way up to a senior developer can find use in having a quick, organized notepage to store snippets of code for future use.
 
 ---
 
@@ -26,19 +22,13 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 
 ---
 
-# Install all the dependencies or node packages used for development via Terminal
-
-`npm install` 
-
----
-
-# Things to add
+# Future feature goals
 
 - Create a `.env` file and add the following as `key: value` 
-  - PORT: 2121 (can be any port example: 3000) 
-  - DB_STRING: `your database URI` 
+- PORT: 2121 (can be any port example: 3000) 
+- DB_STRING: `your database URI` 
  ---
  
- Have fun testing and improving it! 😎
+ Have fun testing it! 😎
 
 
