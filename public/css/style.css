@@ -1,3 +1,8 @@
+:root {
+    --orange-color: #f1684e;
+    --blue-color: #85c8dd;
+}
+
 h1{
     color: red;
 }
