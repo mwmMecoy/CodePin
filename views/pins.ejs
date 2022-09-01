@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>CodePins</h1>
+    <ul>
+    <% snippets.forEach( el => { %>
+            <li class='todoItem' data-id='<%=el._id%>'>
+                <span class='wrapCode'><%= decodeURIComponent(el.snippet) %></span> 
+                <span><%= el.title %></span> 
+                <span><%= el.language %></span>
+                <span><%= el.description %></span>  
+                <span class='del'> Delete </span>
+            </li>
+    <% }) %>    
+    </ul>
+
+    <form action="/pins/createSnippet" method='POST' id="snippetForm">
+        <!-- <input type="text" placeholder="Enter Todo Item" name='todoItem'> -->
+        <textarea name="todoItem" placeholder="Enter Code Snippet..."></textarea>
+        <input type="text" placeholder="Enter Title" name='codeTitle'>
+        <input type="text" placeholder="Enter Description" name='codeDescription'>
+        <select name="language">
+            <% const LANGUAGES = ['HTML', 'CSS', 'Python', 'Java', 'JavaScript', 'Swift', 'C++', 'C#', 'R', 'Golang (Go)', 'Ruby'] %>
+                <% for (var i = 0; i < LANGUAGES.length; i++) { %>
+                    <option value=<%=LANGUAGES[i] %>><%=LANGUAGES[i] %></option>              
+                <% } 
+                %>
+        </select>
+        <input type="submit">
+    </form>
+
+    <a href="/logout">Logout</a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
