@@ -16,18 +16,10 @@
     <div id="snippetsContainer">
         <% snippets.forEach( el=> { %>
             <div class='todoItem' data-id='<%=el._id%>'>
-                <h3>
-                    <%= el.title %>
-                </h3>
-                <div class='wrapCode code'>
-                    <%= decodeURIComponent(el.snippet) %>
-                </div>
-                <h4>
-                    <%= el.language %>
-                </h4>
-                <p>
-                    <%= el.description %>
-                </p>
+                <h3><%= el.title %></h3>
+                <div class='wrapCode code'><%= decodeURIComponent(el.snippet) %></div>
+                <h4><%= el.language %></h4>
+                <p><%= el.description %></p>
                 <button class='del'> Delete </button>
             </div>
             <% }) %>
