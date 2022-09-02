@@ -1,0 +1,47 @@
+body {
+    display: grid;
+    place-items: center;
+}
+
+#snippetsContainer {
+    display: flex;
+    gap: 20px;
+}
+
+.todoItem {
+    display: grid;
+    place-items: center;
+    min-width: 300px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px gray;
+    /* background-color: var(--orange-color); */
+}
+
+.todoItem h3 {
+    color: var(--orange-color);
+    text-transform: uppercase;
+}
+
+.code {
+    min-height: 100px;
+    width: 60%;
+    background-color: #373636;
+    color: white;
+    border-radius: 10px;
+    padding: 2rem;;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+form textarea {
+    min-width: 300px;
+    min-height: 150px;
+}
+
+form > * {
+    margin-top: 10px;
+}
