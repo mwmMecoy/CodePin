@@ -4,7 +4,7 @@ html{
 }
 
 /* Header */
-img{
+.logo{
     max-height: 100px;
     margin: 0;
 }
@@ -76,4 +76,17 @@ h1 span{
 
 .redText{
     color: #f1684e;
+}
+
+.exampleSection{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.exampleSection img{
+    width: 30%;
+    max-height: 600px;
+    margin: 10px;
 }
