@@ -174,3 +174,7 @@ body {
   .lt-ie9 input[type=text], .lt-ie9 input[type=password] {
     line-height: 34px;
   }
+
+  #loginButton {
+    margin-top: auto;
+  }
