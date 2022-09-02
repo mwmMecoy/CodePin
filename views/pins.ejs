@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,19 +9,29 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pins.style.css">
 </head>
+
 <body>
     <h1>CodePins</h1>
+    <a href="/pins/dashboard">Go to public dashboard</a>
     <div id="snippetsContainer">
-    <% snippets.forEach( el => { %>
+        <% snippets.forEach( el=> { %>
             <div class='todoItem' data-id='<%=el._id%>'>
-                <h3><%= el.title %></h3>
-                <div class='wrapCode code'><%= decodeURIComponent(el.snippet) %></div> 
-                <h4><%= el.language %></h4>
-                <p><%= el.description %></p>  
+                <h3>
+                    <%= el.title %>
+                </h3>
+                <div class='wrapCode code'>
+                    <%= decodeURIComponent(el.snippet) %>
+                </div>
+                <h4>
+                    <%= el.language %>
+                </h4>
+                <p>
+                    <%= el.description %>
+                </p>
                 <button class='del'> Delete </button>
             </div>
-    <% }) %>    
-        </div>
+            <% }) %>
+    </div>
 
     <form action="/pins/createSnippet" method='POST' id="snippetForm">
         <!-- <input type="text" placeholder="Enter Todo Item" name='todoItem'> -->
@@ -28,11 +39,12 @@
         <input type="text" placeholder="Enter Title" name='codeTitle'>
         <input type="text" placeholder="Enter Description" name='codeDescription'>
         <select name="language">
-            <% const LANGUAGES = ['HTML', 'CSS', 'Python', 'Java', 'JavaScript', 'Swift', 'C++', 'C#', 'R', 'Golang (Go)', 'Ruby'] %>
-                <% for (var i = 0; i < LANGUAGES.length; i++) { %>
-                    <option value=<%=LANGUAGES[i] %>><%=LANGUAGES[i] %></option>              
-                <% } 
-                %>
+            <% const LANGUAGES=['HTML', 'CSS' , 'Python' , 'Java' , 'JavaScript' , 'Swift' , 'C++' , 'C#' , 'R'
+                , 'Golang (Go)' , 'Ruby' ] %>
+                <% for (var i=0; i < LANGUAGES.length; i++) { %>
+                    <option value=<%=LANGUAGES[i] %>><%=LANGUAGES[i] %>
+                    </option>
+                    <% } %>
         </select>
         <input id="submitButton" type="submit">
     </form>
@@ -41,4 +53,5 @@
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
