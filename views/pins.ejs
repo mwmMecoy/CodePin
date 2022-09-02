@@ -10,27 +10,27 @@
 </head>
 
 <body>
+
     <h1>CodePins</h1>
-    <a href="/pins/dashboard">Go to public dashboard</a>
-    <ul>
+    <div id="snippetsContainer">
         <% snippets.forEach( el=> { %>
-            <li class='todoItem' data-id='<%=el._id%>'>
-                <span class='wrapCode'>
-                    <%= decodeURIComponent(el.snippet) %>
-                </span>
-                <span>
+            <div class='todoItem' data-id='<%=el._id%>'>
+                <h3>
                     <%= el.title %>
-                </span>
-                <span>
+                </h3>
+                <div class='wrapCode code'>
+                    <%= decodeURIComponent(el.snippet) %>
+                </div>
+                <h4>
                     <%= el.language %>
-                </span>
-                <span>
+                </h4>
+                <p>
                     <%= el.description %>
-                </span>
+                </p>
                 <span class='del'> Delete </span>
-            </li>
+            </div>
             <% }) %>
-    </ul>
+    </div>
 
     <form action="/pins/createSnippet" method='POST' id="snippetForm">
         <!-- <input type="text" placeholder="Enter Todo Item" name='todoItem'> -->
