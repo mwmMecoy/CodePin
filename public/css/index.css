@@ -90,3 +90,18 @@ h1 span{
     max-height: 600px;
     margin: 10px;
 }
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 616px){
+    .exampleSection img{
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 416px){
+    .exampleSection img{
+        width: 90%;
+    }
+}
