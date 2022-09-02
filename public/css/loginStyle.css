@@ -1,23 +1,114 @@
-
 /*
  * Copyright (c) 2012 Thibaut Courouble
  * http://www.cssflow.com
  * Licensed under the MIT License
  */
 
-/* body {
-    font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
-    color: #404040;
-    background: #85c8dd;
-  */
-  
-  .login {
+/* Base Styling */
+:root {
+  --background: #E9F6F5;
+  --red-text: #f1684e;
+  --blue-text: #85c8dd;
+  --black-text: #000000;
+  --grey-text: #d3e0e2;
+  --dark-grey: #d9d9d9;
+  --white-text: #ffffff;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 62.5px;
+  padding: 1% 3%;
+}
+
+html {
+  background-color: var(--background);
+}
+
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  max-height: 100px;
+  margin: 0;
+}
+
+ul {
+  display: flex;
+  float: right;
+  margin: 0 5%;
+}
+
+li.header {
+  list-style: none;
+  margin: 5%;
+}
+
+.btn {
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  color: var(--white-text);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.btn.red,
+.btn.blue {
+  width: 150px;
+}
+
+.btn.red {
+  background: var(--red-text);
+  border: 1px solid var(--red-text);
+}
+
+.btn.blue {
+  background: var(--blue-text);
+  border: 1px solid var(--blue-text);
+}
+
+button:hover,
+button:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: var(--red-text);
+}
+
+button:active {
+  opacity: .5;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-text);
+}
+/* Main */
+div.login {
     position: relative;
     margin: 30px auto;
     padding: 20px 20px 20px;
-    width: 310px;
-    background: white;
-    border-radius: 3px;
+    width: 50%;
+      background: var(--white-text);
+      border-radius: 15px;
+      border: 1px solid var(--dark-grey);
     -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
   }
@@ -34,23 +125,15 @@
     border-radius: 4px;
   }
   
-  .login h1 {
+        h1.login {
     margin: -20px -20px 21px;
     line-height: 40px;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #555;
+    color: var(--black-text);
     text-align: center;
-    text-shadow: 0 1px white;
-    background: #f3f3f3;
-    border-bottom: 1px solid #cfcfcf;
-    border-radius: 3px 3px 0 0;
-    background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
-    background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
-    background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
-    background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
-    -webkit-box-shadow: 0 1px whitesmoke;
-    box-shadow: 0 1px whitesmoke;
+      border-bottom: 1px solid var(--dark-grey);
+        border-radius: 15px 15px 0 0;
   }
   
   .login p {

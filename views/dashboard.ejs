@@ -10,38 +10,45 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,600&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/pins.style.css">
+  <link rel="stylesheet" href="../css/pinsStyle.css">
 </head>
 
 <body>
-  <h1>CodePins</h1>
-  <a href="/pins">Go to my pins</a>
-  <div id="snippetsContainer">
+  <header>
+    <img class="logo" src="images/codepin-logo.jpg" alt="CodePin Logo">
+    <ul>
+      <li class="header" id="logoutButton"><a class="btn red logout" href="/logout" role="button">Logout</a></li>
+      <li class="header" id="toPrivateBtn"><a href="/pins" class="btn blue pin-user" role="button">Go to
+          personal dashboard</a></li>
+    </ul>
+  </header>
+  
+  <main>
+    <h1 class="pin-dashboard">See It.</h1>
+    <div class="main-container">
+      <div class="snippet out" id="snippetsContainer">
     <% snippets.forEach( el=> { %>
-      <div class='todoItem' data-id='<%=el._id%>'>
-        <h3>
+      <div class="snippet in pubDash" data-id='<%=el._id%>'>
+        <h3 class="snippet">
           <%= el.title %>
         </h3>
-        <div class='wrapCode code'>
+        <div class="wrapCode code">
           <%= decodeURIComponent(el.snippet) %>
         </div>
-        <h4>
+        <h4 class="snippet">
           <%= el.language %>
         </h4>
-        <p>
+        <p class="snippet">
           <%= el.description %>
         </p>
-        <button class='del'> Delete </button>
+        <button class="btn del">Delete</button>
       </div>
       <% }) %>
   </div>
-
-
-
-  <a href="/logout">Logout</a>
+  </div>
 
   <script src="js/main.js"></script>
+  </main>
 </body>
 
 </html>

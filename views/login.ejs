@@ -9,10 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/loginStyle.css">
 </head>
 <body>
+    <header>
+        <img class="logo" src="images/codepin-logo.jpg" alt="CodePin Logo">
+        <ul>
+            <li class="header" id="logInButton"><a class="btn blue login header" href="/login" role="button">Login</a></li>
+            <li class="header" id="signUpButton"><a class="btn red signup header" href="/signup" role="button">Signup</a>
+            </li>
+        </ul>
+    </header>
+    <main>
     <% if (locals.messages.errors) { %>
         <% messages.errors.forEach( el => { %>
             <div class="alert alert-danger"><%= el.msg %></div>
@@ -24,17 +32,17 @@
         <% }) %>    
     <% } %>
     <div class="login">
-        <h1>Login to CodePin</h1>
+        <h1 class="login">Login to CodePin</h1>
         <form action="/login" method="POST">
-            <p><input type="text" name="email" placeholder="Email Address"></p>
-            <p><input type="password" name="password" placeholder="Password"></p>
-            <br>
+            <input type="text" name="email" placeholder="Email Address" required>
+            <input type="password" name="password" placeholder="Password" required>
             <button class="btn login" type="submit" name="commit" value="Login">Login</button>
         </form>
     </div>
     
     <div class="login-help">
-        <p>Need an account? <a href="/signup">Click here to create one</a>.</p>
+        <p class="signup">Need an account? <a href="/signup">Click here to create one</a></p>
     </div>
+    </main>
 </body>
 </html>

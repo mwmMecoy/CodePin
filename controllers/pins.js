@@ -4,7 +4,7 @@ module.exports = {
     getCodePins: async (req,res)=>{ // Get ALL  
         try{
             const allSnippets = await Snippet.find()
-            res.render('dashboard.ejs', {snippets: allSnippets})
+            res.render('publicDashboard.ejs', { snippets: allSnippets })
         }catch(err){
             console.log(err)
         }
@@ -13,7 +13,7 @@ module.exports = {
         console.log(req.user)
         try {
             const userSnippets = await Snippet.find({userId:req.user.id})
-            res.render('pins.ejs', {snippets: userSnippets, user: req.user})
+            res.render('userDashboard.ejs', { snippets: userSnippets, user: req.user })
         } catch (err) {
             console.log(err)
         }

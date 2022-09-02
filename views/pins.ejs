@@ -10,52 +10,57 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/pins.style.css">
+    <link rel="stylesheet" href="css/pinsStyle.css">
 </head>
 
 <body>
-    <h1>CodePins</h1>
-    <a href="/pins/dashboard">Go to public dashboard</a>
-    <div id="snippetsContainer">
+    <header>
+        <img class="logo" src="images/codepin-logo.jpg" alt="CodePin Logo">
+        <ul>
+            <li class="header" id="logoutButton"><a class="btn red logout" href="/logout" role="button">Logout</a></li>
+            <li class="header" id="toPublicBtn"><a href="/pins/dashboard" class="btn blue pin-dash" role="button">Go to
+                    public dashboard</a></li>
+        </ul>
+    </header>
+    <main>
+        <h1 class="pin-dashboard">Pin It.</h1>
+        <div class="main-container">
+            <div class="snippet out" id="snippetsContainer">
         <% snippets.forEach( el=> { %>
-            <div class='snippet userDash' data-id='<%=el._id%>'>
-                <h3>
+            <div class='snippet in userDash' data-id='<%=el._id%>'>
+                <h3 class="snippet">
                     <%= el.title %>
                 </h3>
-                <div class='wrapCode code'>
+                <div class="wrapCode code">
                     <%= decodeURIComponent(el.snippet) %>
                 </div>
-                <h4>
+                <h4 class="snippet">
                     <%= el.language %>
                 </h4>
-                <p>
+                <p class="snippet">
                     <%= el.description %>
                 </p>
-                <button class='del'> Delete </button>
+                <button class="btn del">Delete</button>
             </div>
             <% }) %>
     </div>
+    </div>
 
-    <form action="/pins/createSnippet" method='POST' id="snippetForm">
-        <!-- <input type="text" placeholder="Enter Todo Item" name='todoItem'> -->
-        <textarea name="todoItem" placeholder="Enter Code Snippet..."></textarea>
-        <input type="text" placeholder="Enter Title" name='codeTitle'>
-        <input type="text" placeholder="Enter Description" name='codeDescription'>
-        <select name="language">
-            <% const LANGUAGES=['HTML', 'CSS' , 'Python' , 'Java' , 'JavaScript' , 'Swift' , 'C++' , 'C#' , 'R'
+            <form action="/pins/createSnippet" method='POST' id="snippetForm">
+                <textarea name="todoItem" placeholder="Enter Code Snippet..." required></textarea>
+                <input type="text" placeholder="Enter Title" name='codeTitle' required>
+                <input type="text" placeholder="Enter Description" name='codeDescription'>
+                <select name="language">
+                    <% const LANGUAGES=['HTML', 'CSS' , 'Python' , 'Java' , 'JavaScript' , 'Swift' , 'C++' , 'C#' , 'R'
                 , 'Golang (Go)' , 'Ruby' ] %>
-                <% for (var i=0; i < LANGUAGES.length; i++) { %>
+                    <% for (var i=0; i < LANGUAGES.length; i++) { %>
                     <option value = <%=LANGUAGES[i] %>><%=LANGUAGES[i] %>
                     </option>
                     <% } %>
-        </select>
-        <input id="submitButton" type="submit">
-    </form>
-
-    <a id="logoutButton" href="/logout">Logout</a>
-
+                </select>
+                <button id="submitButton" type="submit">Pin It!</button>
+                </form>
+        </main>
     <script src="js/main.js"></script>
-</body>
-
+    </body>
 </html>
