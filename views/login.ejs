@@ -15,7 +15,7 @@
     <header>
         <img class="logo" src="images/codepin-logo.jpg" alt="CodePin Logo">
         <ul>
-            <li class="header" id="logInButton"><a class="btn blue login header" href="/login" role="button">Login</a></li>
+            <li class="header" id="logInButton"><a class="btn blue login header" href="/" role="button">Home</a></li>
             <li class="header" id="signUpButton"><a class="btn red signup header" href="/signup" role="button">Signup</a>
             </li>
         </ul>
@@ -33,7 +33,7 @@
     <% } %>
     <div class="login">
         <h1 class="login">Login to CodePin</h1>
-        <form action="/login" method="POST">
+        <form class="login" action="/login" method="POST">
             <input type="text" name="email" placeholder="Email Address" required>
             <input type="password" name="password" placeholder="Password" required>
             <button class="btn login" type="submit" name="commit" value="Login">Login</button>
