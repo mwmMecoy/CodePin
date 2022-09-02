@@ -7,7 +7,7 @@ const { ensureAuth } = require('../middleware/auth')
 router.get('/', ensureAuth, snippetController.getCodePinsByUser)
 
 // Get USER pins
-router.get('/{userId}', snippetController.getCodePinsByUser)
+router.get('/dashboard', ensureAuth, snippetController.getCodePins)
 
 // Add a new snippet
 router.post('/createSnippet', snippetController.createSnippet)
