@@ -52,6 +52,7 @@ ul{
 
 a{
     text-decoration: none;
+    color: #FFFFFF;
 }
 
 /* Main */
@@ -59,7 +60,7 @@ a{
 h1{
     display: flex;
     justify-content: center;
-    margin-top: 15%;
+    margin-top: 10%;
 }
 
 h1 span{
@@ -89,4 +90,19 @@ h1 span{
     width: 30%;
     max-height: 600px;
     margin: 10px;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 616px){
+    .exampleSection img{
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 416px){
+    .exampleSection img{
+        width: 90%;
+    }
 }
