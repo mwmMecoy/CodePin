@@ -65,3 +65,15 @@ h1{
 h1 span{
     padding: 1%;
 }
+
+.blueText{
+    color: #85c8dd;
+}
+
+.greyText{
+    color: #d3e0e2;
+}
+
+.redText{
+    color: #f1684e;
+}
