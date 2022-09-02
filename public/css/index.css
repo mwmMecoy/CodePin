@@ -1,108 +1,124 @@
 
-html{
-    background-color: #eaf6f6;
-}
+    html{
+        background-color: #eaf6f6;
+    }
 
 /* Header */
-.logo{
-    max-height: 100px;
-    margin: 0;
-}
+    .logo{
+        max-height: 100px;
+        margin: 0;
+    }
 
-ul{
-    float: right;
-    margin-top: 0;
-}
+    ul{
+        float: right;
+        margin-top: 0;
+    }
 
-.button{
-  background: #FF4742;
-  border: 1px solid #FF4742;
-  border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
-  font-size: 16px;
-  font-weight: 800;
-  line-height: 16px;
-  min-height: 40px;
-  outline: 0;
-  padding: 12px 14px;
-  text-align: center;
-  text-rendering: geometricprecision;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-}
+    .button{
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 16px;
+        min-height: 40px;
+        outline: 0;
+        padding: 12px 14px;
+        text-align: center;
+        text-rendering: geometricprecision;
+        text-transform: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+    }
 
-.button:hover,
-.button:active {
-  background-color: initial;
-  background-position: 0 0;
-  color: #FF4742;
-}
+    #signUpButton{
+      background: #FF4742;
+      border: 1px solid #FF4742;
+    }
 
-.button:active {
-  opacity: .5;
-}
+    #signUpButton:hover,
+    #signUpButton:active {
+      background-color: initial;
+      background-position: 0 0;
+      color: #FF4742;
+    }
 
-a{
-    text-decoration: none;
-    color: #FFFFFF;
-}
+    #signUpButton:active {
+      opacity: .5;
+    }
+
+    #logInButton{
+        background: #85c8dd;
+        border: 1px solid #85c8dd;
+      }
+  
+      #logInButton:hover,
+      #logInButton:active {
+        background-color: initial;
+        background-position: 0 0;
+        color: #85c8dd;
+      }
+  
+      #logInButton:active {
+        opacity: .5;
+      }
 
 /* Main */
 
-h1{
-    display: flex;
-    justify-content: center;
-    margin-top: 10%;
-}
+    h1{
+        display: flex;
+        justify-content: center;
+        margin-top: 10%;
+    }
 
-h1 span{
-    padding: 1%;
-}
+    h1 span{
+        padding: 1%;
+    }
 
-.blueText{
-    color: #85c8dd;
-}
+    .blueText{
+        color: #85c8dd;
+    }
 
-.greyText{
-    color: #d3e0e2;
-}
+    .greyText{
+        color: #d3e0e2;
+    }
 
-.redText{
-    color: #f1684e;
-}
+    .redText{
+        color: #f1684e;
+    }
 
-.exampleSection{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-}
+    .exampleSection{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
 
-.exampleSection img{
-    width: 30%;
-    max-height: 600px;
-    margin: 10px;
-}
+    .exampleSection img{
+        width: 30%;
+        max-height: 600px;
+        margin: 10px;
+    }
 
 
 /* Media Queries */
 
-@media only screen and (max-width: 616px){
-    .exampleSection img{
-        width: 45%;
+    @media only screen and (max-width: 616px){
+        .exampleSection img{
+            width: 45%;
+        }
     }
-}
 
-@media only screen and (max-width: 416px){
-    .exampleSection img{
-        width: 90%;
+    @media only screen and (max-width: 416px){
+        .exampleSection img{
+            width: 90%;
+        }
     }
-}
+
