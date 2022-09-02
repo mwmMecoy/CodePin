@@ -31,11 +31,11 @@ h1 {
 
 .code {
     min-height: 100px;
-    width: 60%;
+    min-width: 60%;
     background-color: #373636;
     color: white;
     border-radius: 10px;
-    padding: 2rem;;
+    padding: 2rem;
 }
 
 .todoItem h4, .todoItem span {
