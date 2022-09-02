@@ -1,6 +1,11 @@
+/* Header */
+img{
+    
+}
 
 ul{
-    
+    float: right;
+    margin-top: 0;
 }
 
 .button{
@@ -41,4 +46,16 @@ ul{
 
 a{
     text-decoration: none;
+}
+
+/* Main */
+
+h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+}
+
+h1 span{
+    padding: 1%;
 }
