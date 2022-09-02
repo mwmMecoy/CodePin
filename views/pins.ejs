@@ -17,7 +17,7 @@
                 <div class='wrapCode code'><%= decodeURIComponent(el.snippet) %></div> 
                 <h4><%= el.language %></h4>
                 <p><%= el.description %></p>  
-                <span class='del'> Delete </span>
+                <button class='del'> Delete </button>
             </div>
     <% }) %>    
         </div>
@@ -34,7 +34,7 @@
                 <% } 
                 %>
         </select>
-        <input type="submit">
+        <input id="submitButton" type="submit">
     </form>
 
     <a href="/logout">Logout</a>

@@ -1,6 +1,11 @@
 body {
     display: grid;
     place-items: center;
+    background-color: var(--blue-color)
+}
+
+h1 {
+    color: var(--orange-color);
 }
 
 #snippetsContainer {
@@ -14,7 +19,8 @@ body {
     min-width: 300px;
     border-radius: 10px;
     box-shadow: 2px 2px 2px 2px gray;
-    /* background-color: var(--orange-color); */
+    background-color: white;
+    padding: 1rem .5rem;
 }
 
 .todoItem h3 {
@@ -31,6 +37,14 @@ body {
     padding: 2rem;;
 }
 
+.todoItem h4, .todoItem span {
+    color: var(--orange-color);
+}
+
+.todoItem p {
+    margin-top: 0;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -42,6 +56,43 @@ form textarea {
     min-height: 150px;
 }
 
+form ::placeholder {
+    color: rgb(127, 97, 40);
+    text-align: center
+}
+
 form > * {
     margin-top: 10px;
+    border-radius: 5px;
+}
+
+form select {
+    text-align: center;
+}
+
+.del {
+    background-color: rgb(151, 27, 27);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: .5rem;
+    width: 50%;
+    margin-top: 20px;
+}
+
+.del:hover {
+    background-color: rgb(176, 30, 30);
+}
+
+#submitButton {
+    background-color: rgb(19, 159, 19);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: .5rem
+}
+
+#submitButton:hover {
+    background-color: rgb(22, 111, 22);
 }
