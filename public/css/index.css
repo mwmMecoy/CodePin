@@ -1,6 +1,12 @@
+
+html{
+    background-color: #eaf6f6;
+}
+
 /* Header */
 img{
-    
+    max-height: 100px;
+    margin: 0;
 }
 
 ul{
