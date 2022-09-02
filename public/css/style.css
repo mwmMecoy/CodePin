@@ -4,15 +4,9 @@
 }
 
 h1{
-    color: red;
+    color: var(--orange-color);
 }
-.completed{
-    text-decoration: line-through;
-    color: gray;
-}
-.not{
-    text-decoration: underline;
-}
+
 
 /* has to be on code snippets to keep line breaks and indentions */
 .wrapCode {

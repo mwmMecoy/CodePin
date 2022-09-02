@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodePin - SignUp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/loginStyle.css">
 </head>
 <body>
@@ -16,11 +20,11 @@
     <div class="login">
         <form action="/signup" method="POST">
             <p><input type="text" name="userName" placeholder="User Name"></p>
-            <p><input type="text" name="email" placeholder="Email"></p>
+            <p><input type="text" name="email" placeholder="Email Address"></p>
             <p><input type="password" name="password" placeholder="Password"></p>
             <p><input type="password" name="confirmPassword" placeholder="Confirm Password"></p>
             <br>
-            <input type="submit" name="commit" value="Create User">
+            <button class="btn signUp" type="submit" name="commit" value="Create User">Sign Up</button>
         </form>
     </div>
 </body>

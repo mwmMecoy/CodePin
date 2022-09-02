@@ -5,11 +5,11 @@
  * Licensed under the MIT License
  */
 
-body {
+/* body {
     font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
     color: #404040;
     background: #85c8dd;
-  }
+  */
   
   .login {
     position: relative;
@@ -83,8 +83,10 @@ body {
     vertical-align: middle;
   }
   
-  .login p.submit {
-    text-align: right;
+        button.login,
+        button.signUp {
+          text-align: center;
+          font-size: 14px;
   }
   
   .login-help {
@@ -141,9 +143,10 @@ body {
     outline-offset: 0;
   }
   
-  input[type=submit] {
+        button[type=submit] {
     padding: 0 18px;
     height: 29px;
+    width: 25%;
     font-size: 12px;
     font-weight: bold;
     color: #527881;
@@ -164,7 +167,7 @@ body {
     box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
   }
   
-  input[type=submit]:active {
+        button[type=submit]:active {
     background: #cde5ef;
     border-color: #9eb9c2 #b3c0c8 #b4ccce;
     -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
@@ -173,8 +176,4 @@ body {
   
   .lt-ie9 input[type=text], .lt-ie9 input[type=password] {
     line-height: 34px;
-  }
-
-  #loginButton {
-    margin-top: auto;
   }

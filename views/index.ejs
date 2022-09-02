@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google fonts --->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
     <title>CodePin</title>
 </head>
@@ -11,15 +16,15 @@
     <header>
         <img class="logo" src="images/codepin-logo.jpg" alt="CodePin Logo">
         <ul>
-            <li class="button" id="logInButton"><a href="/login"> Login</a></li>
-            <li class="button" id="signUpButton"><a href="/signup"> Signup</a></li>
+            <li class="header" id="logInButton"><a class="btn blue login header" href="/login" role="button">Login</a></li>
+            <li class="header" id="signUpButton"><a class="btn red signup header" href="/signup" role="button">Signup</a></li>
         </ul>
     </header>
     <main>
-        <h1>
-            <span class="blueText">Code it.</span>
-            <span class="greyText">See it.</span>
-            <span class="redText">Pin it.</span>
+        <h1 class="main-slogan slogan">
+            <span class="slogan blueText">Code it.</span>
+            <span class="slogan greyText">See it.</span>
+            <span class="slogan redText">Pin it.</span>
         </h1>
         <section class="exampleSection">
             <img src="images/snippet-example-1.jpg" alt="code snippet example">

@@ -1,11 +1,18 @@
-body {
+:root {
+    --orange-color: #f1684e;
+    --blue-color: #85c8dd;
+}
+
+/* body {
     display: grid;
     place-items: center;
     background-color: var(--blue-color)
 }
 
+*/
+
 h1 {
-    color: orangered;
+    color: var(--orange-color);
 }
 
 #snippetsContainer {
@@ -14,7 +21,7 @@ h1 {
     gap: 20px;
 }
 
-.todoItem {
+/* .todoItem {
     display: grid;
     place-items: center;
     min-width: 300px;
@@ -25,27 +32,32 @@ h1 {
 }
 
 .todoItem h3 {
-    color: orangered;
+    color: var(--orange-color);
     text-transform: uppercase;
 }
+
+*/
 
 .code {
     min-height: 100px;
     width: 60%;
     background-color: #373636;
     color: white;
-    border-radius: 10px;
-    padding: 2rem;;
+    /* border-radius: 10px; */
+        padding: 1.5rem;
+        ;
 }
 
-.todoItem h4, .todoItem span {
-    color: orangered;
-}
+/* .todoItem h4, .todoItem span {
+    color: var(--orange-color);
+} */
 
-.todoItem p {
+/* .todoItem p {
     margin-top: 0;
     color: rgb(121, 121, 255);
 }
+
+*/
 
 form {
     display: flex;
@@ -78,7 +90,7 @@ form select {
     height: 29px;
     font-size: 12px;
     font-weight: bold;
-    color: red;
+    color: var(--orange-color);
     text-shadow: 0 1px #e3f1f1;
     background: #cde5ef;
     border: 1px solid;
@@ -124,5 +136,5 @@ form select {
 }
 
 #submitButton:hover {
-    color: orangered;
+    color: var(--orange-color);
 }
