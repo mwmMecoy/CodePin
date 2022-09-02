@@ -42,14 +42,14 @@
             <% const LANGUAGES=['HTML', 'CSS' , 'Python' , 'Java' , 'JavaScript' , 'Swift' , 'C++' , 'C#' , 'R'
                 , 'Golang (Go)' , 'Ruby' ] %>
                 <% for (var i=0; i < LANGUAGES.length; i++) { %>
-                    <option value=<%=LANGUAGES[i] %>><%=LANGUAGES[i] %>
+                    <option value <%=LANGUAGES[i] %>><%=LANGUAGES[i] %>
                     </option>
                     <% } %>
         </select>
         <input id="submitButton" type="submit">
     </form>
 
-    <a href="/logout">Logout</a>
+    <a id="logoutButton" href="/logout">Logout</a>
 
     <script src="js/main.js"></script>
 </body>
