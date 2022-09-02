@@ -3,8 +3,8 @@ const router = express.Router()
 const snippetController = require('../controllers/pins') 
 const { ensureAuth } = require('../middleware/auth')
 
-// Get all pins
-router.get('/', ensureAuth, snippetController.getCodePins)
+// Get all pins of the logged in user
+router.get('/', ensureAuth, snippetController.getCodePinsByUser)
 
 // Get USER pins
 router.get('/{userId}', snippetController.getCodePinsByUser)
