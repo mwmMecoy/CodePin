@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CodePin - Login</title>
+    <link rel="stylesheet" href="./css/loginStyle.css">
 </head>
 <body>
     <% if (locals.messages.errors) { %>
@@ -17,10 +18,17 @@
             <div class="alert alert-danger"><%= el.msg %></div>
         <% }) %>    
     <% } %>
-    <form action="/login" method="POST">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit">
-    </form>
+    <div class="login">
+        <h1>Login to CodePin</h1>
+        <form action="/login" method="POST">
+            <p><input type="text" name="email" placeholder="Email Address"></p>
+            <p><input type="password" name="password" placeholder="Password"></p>
+            <p class="submit"><input type="submit" name="commit" value="Login"></p>
+        </form>
+    </div>
+    
+    <div class="login-help">
+        <p>Need an account? <a href="/signup">Click here to create one</a>.</p>
+    </div>
 </body>
 </html>
