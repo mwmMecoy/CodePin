@@ -125,17 +125,11 @@ html{
 
 
 /* Media Queries */
-<<<<<<< HEAD
-@media only screen and (max-width: 616px){
-    .exampleSection img{
-        width: 45%;
-=======
 
     @media only screen and (max-width: 616px){
         .exampleSection img{
             width: 45%;
         }
->>>>>>> main
     }
 
     @media only screen and (max-width: 416px){
