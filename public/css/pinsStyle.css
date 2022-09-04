@@ -35,7 +35,7 @@ header {
 }
 
 .logo {
-    max-height: 100px;
+    max-height: 150px;
     margin: 0;
 }
 
@@ -117,10 +117,10 @@ h1.pin-dashboard {
 
 div.main-container {
     display: flex;
+    flex-wrap: wrap;
 }
 
 div.snippet.out {
-    flex-wrap: wrap;
     display: contents;
 }
 
