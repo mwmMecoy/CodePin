@@ -14,6 +14,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
   <header>
     <img class="logo" src="images/codepin-logo.jpg" alt="CodePin Logo">
     <ul>
@@ -42,6 +43,20 @@
           <%= el.description %>
         </p>
         <button class="btn del">Delete</button>
+=======
+  <h1>CodePins</h1>
+  <a href="/pins">Go to my pins</a>
+
+
+  <div id="snippetsContainer">
+    <% snippets.forEach( el=> { %>
+      <div class='todoItem' data-id='<%=el._id%>'>
+        <h3><%= el.title %></h3>
+        <!-- this div has to stay formatted on one line or it wont work when showing the snippet -->
+        <div class='wrapCode code'><%= decodeURIComponent(el.snippet) %></div>
+        <h4><%= el.language %></h4>
+        <p><%= el.description %></p> 
+>>>>>>> main
       </div>
       <% }) %>
   </div>

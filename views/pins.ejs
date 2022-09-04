@@ -27,6 +27,7 @@
         <div class="main-container">
             <div class="snippet out" id="snippetsContainer">
         <% snippets.forEach( el=> { %>
+<<<<<<< HEAD
             <div class='snippet in userDash' data-id='<%=el._id%>'>
                 <h3 class="snippet">
                     <%= el.title %>
@@ -41,6 +42,14 @@
                     <%= el.description %>
                 </p>
                 <button class="btn del">Delete</button>
+=======
+            <div class='todoItem' data-id='<%=el._id%>'>
+                <h3><%= el.title %></h3>
+                <div class='wrapCode code'><%= decodeURIComponent(el.snippet) %></div>
+                <h4><%= el.language %></h4>
+                <p><%= el.description %></p>
+                <button class='del'> Delete </button>
+>>>>>>> main
             </div>
             <% }) %>
     </div>
