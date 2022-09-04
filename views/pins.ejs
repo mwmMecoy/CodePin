@@ -31,9 +31,9 @@
                 <h3 class="snippet">
                     <%= el.title %>
                 </h3>
-                <div class="wrapCode code">
-                    <%= decodeURIComponent(el.snippet) %>
-                </div>
+                <!-- leave this line on a single line to keep formatting -->
+                <div class="wrapCode code"><%= decodeURIComponent(el.snippet) %></div>
+                <!--------------------------------------------------------->
                 <h4 class="snippet">
                     <%= el.language %>
                 </h4>
