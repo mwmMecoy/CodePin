@@ -33,7 +33,7 @@
                 </h3>
                 <!-- leave this line on a single line to keep formatting -->
                 <div class="wrapCode code"><%= decodeURIComponent(el.snippet) %></div>
-                <!--------------------------------------------------------->
+                <!-------------------------------------------------------->
                 <h4 class="snippet">
                     <%= el.language %>
                 </h4>
@@ -47,7 +47,7 @@
     </div>
 
             <form action="/pins/createSnippet" method='POST' id="snippetForm">
-                <textarea name="todoItem" placeholder="Enter Code Snippet..." required></textarea>
+                <textarea id="snippetTextArea" name="todoItem" placeholder="Enter Code Snippet..." required></textarea>
                 <input type="text" placeholder="Enter Title" name='codeTitle' required>
                 <input type="text" placeholder="Enter Description" name='codeDescription'>
                 <select name="language">

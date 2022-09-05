@@ -1,5 +1,6 @@
 const deleteBtn = document.querySelectorAll('.del')
 const todoItem = document.querySelectorAll('span.not')
+const snippetTextArea = document.querySelector('#snippetTextArea')
 
 Array.from(deleteBtn).forEach((el)=>{
     el.addEventListener('click', deleteTodo)
@@ -22,6 +23,21 @@ async function deleteTodo(){
         console.log(err)
     }
 }
+
+snippetTextArea.addEventListener('keydown', (e) => {
+    if (e.keyCode === 9) {
+      e.preventDefault()
+  
+      snippetTextArea.setRangeText(
+        '  ',
+        snippetTextArea.selectionStart,
+        snippetTextArea.selectionStart,
+        'end'
+      )
+    }
+  })
+
+
 
 // async function markComplete(){
 //     const todoId = this.parentNode.dataset.id
