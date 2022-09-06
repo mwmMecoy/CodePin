@@ -1,16 +1,16 @@
 const Snippet = require('../models/Pins')
+const User = require('../models/User')
 
 module.exports = {
     getCodePins: async (req, res) => { // Get ALL  
         try {
             const allSnippets = await Snippet.find()
-            res.render('dashboard.ejs', { snippets: allSnippets })
+            res.render('dashboard.ejs', { snippets: allSnippets, userId: req.user._id, favorites: req.user.favorites })
         } catch (err) {
             console.log(err)
         }
     },
     getCodePinsByUser: async (req, res) => { // Get by USER
-        console.log(req.user)
         try {
             const userSnippets = await Snippet.find({ userId: req.user.id })
             res.render('pins.ejs', { snippets: userSnippets, user: req.user })
@@ -43,6 +43,28 @@ module.exports = {
             res.json('Deleted It')
         } catch (err) {
             console.log(err)
+        }
+    },
+    selectFavorite: async (req,res) => {
+        console.log(req)
+        try {
+            await User.updateOne(
+                {_id: req.user.id},
+                { $push: { favorites : req.body.pinId}}
+            ) 
+        } catch (error) {
+            console.log(error)
+        }
+    },
+    deselectFavorite: async(req, res) => {
+        console.log(req)
+        try {
+            await User.updateOne(
+                {_id: req.user.id},
+                { $pull: { favorites : req.body.pinId}}
+            )
+        } catch (error) {
+            console.log(error)
         }
     }
 }    

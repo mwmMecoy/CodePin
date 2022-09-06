@@ -12,6 +12,9 @@ router.get('/dashboard', ensureAuth, snippetController.getCodePins)
 // Add a new snippet
 router.post('/createSnippet', snippetController.createSnippet)
 
+// Favorite a snippet
+router.post('/selectFavorite', snippetController.selectFavorite)
+
 // add snippet to a board
 // Stretch: move snippet from one board to another
 // edit a snippet?  edit text, edit language
