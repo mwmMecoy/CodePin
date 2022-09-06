@@ -27,6 +27,7 @@
     <h1 class="pin-dashboard">See It.</h1>
     <div class="main-container">
       <div class="snippet out" id="snippetsContainer">
+        <!-- first column, loops through every third snippet starting at zero -->
         <% for(i = 0; i < snippets.length; i+= 3){ %>
           <div class="snippet in pubDash" data-id='<%=snippets[i]._id%>'>
             <h3 class="snippet">
@@ -50,6 +51,7 @@
         <% } %>
       </div>
       <div class="snippet out" id="snippetsContainer">
+        <!-- second column, loops through every third snippet starting at one -->
         <% for(i = 1; i < snippets.length; i+= 3){ %>
           <div class="snippet in pubDash" data-id='<%=snippets[i]._id%>'>
             <h3 class="snippet">
@@ -68,6 +70,7 @@
         <% } %>
       </div>
       <div class="snippet out" id="snippetsContainer">
+        <!-- third column, loops through every third snippet starting at two -->
         <% for(i = 2; i < snippets.length; i+= 3){ %>
           <div class="snippet in pubDash" data-id='<%=snippets[i]._id%>'>
             <h3 class="snippet">

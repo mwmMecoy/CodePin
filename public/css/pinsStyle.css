@@ -168,8 +168,8 @@ p.snippet {
 form {
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    width: 50%;
+    margin: 100px auto;
 }
 
 form textarea {
