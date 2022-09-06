@@ -13,7 +13,8 @@ module.exports = {
     getCodePinsByUser: async (req, res) => { // Get by USER
         try {
             const userSnippets = await Snippet.find({ userId: req.user.id })
-            res.render('pins.ejs', { snippets: userSnippets, user: req.user })
+            const favorites = await Snippet.find({ _id: { $in: req.user.favorites}})
+            res.render('pins.ejs', { snippets: userSnippets, user: req.user, favorites: favorites })
         } catch (err) {
             console.log(err)
         }
@@ -46,23 +47,23 @@ module.exports = {
         }
     },
     selectFavorite: async (req,res) => {
-        console.log(req)
         try {
             await User.updateOne(
                 {_id: req.user.id},
                 { $push: { favorites : req.body.pinId}}
-            ) 
+            )
+            res.json('Pin Selected!')
         } catch (error) {
             console.log(error)
         }
     },
     deselectFavorite: async(req, res) => {
-        console.log(req)
         try {
             await User.updateOne(
                 {_id: req.user.id},
                 { $pull: { favorites : req.body.pinId}}
             )
+            res.json('Pin Deselected!')
         } catch (error) {
             console.log(error)
         }

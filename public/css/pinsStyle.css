@@ -117,16 +117,21 @@ h1.pin-dashboard {
 }
 
 div.main-container {
+    /* display: flex; */
+    /* flex-wrap: wrap;
+    justify-content: center; */
+}
+
+#snippetsContainer, #favoritesContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 div.snippet.out {
-    display: flex;
+    /* display: flex; */
     margin: auto;
-    width: min-content;
-    flex-direction: column;
+    /* width: 40ch; */
+    /* flex-direction: column; */
     margin-top: 0;
 }
 
@@ -156,12 +161,14 @@ p.snippet {
 }
 
 .code {
-    min-height: 100px;
+    height: 200px;
+    overflow-y: scroll;
     font-size: 1rem;
     background-color: var(--black-text);
     color: var(--white-text);
     padding: 1.2rem;
-    min-width: 300px;
+    min-width: 200px;
+    max-width: 1167px;
 }
 
 /* Form Styling */
