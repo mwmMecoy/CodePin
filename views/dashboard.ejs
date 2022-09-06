@@ -28,63 +28,19 @@
     <div class="main-container">
       <div class="snippet out" id="snippetsContainer">
         <!-- first column, loops through every third snippet starting at zero -->
-        <% for(i = 0; i < snippets.length; i+= 3){ %>
+        <% for(i = 0; i < snippets.length; i++){ %>
           <div class="snippet in pubDash" data-id='<%=snippets[i]._id%>'>
-            <h3 class="snippet">
-              <%= snippets[i].title %>
-            </h3>
+            <h3 class="snippet"><%= snippets[i].title %></h3>
             <!-- leave this line on single line to keep formatting -->
             <div class="wrapCode code"><%=decodeURIComponent(snippets[i].snippet)%></div>
             <!------------------------------------------------------->
-            <h4 class="snippet">
-              <%= snippets[i].language %>
-            </h4>
-            <p class="snippet">
-              <%= snippets[0].description %>
-            </p>
+            <h4 class="snippet"><%= snippets[i].language %></h4>
+            <p class="snippet"><%= snippets[0].description %></p>
             <% if(favorites.includes(snippets[i]._id)) { %>
               <button class="unfavorite_btn">Unfavorite</button>
               <%} else {%>
               <button class="favorite_btn">Favorite</button>
             <%}%>
-          </div>
-        <% } %>
-      </div>
-      <div class="snippet out" id="snippetsContainer">
-        <!-- second column, loops through every third snippet starting at one -->
-        <% for(i = 1; i < snippets.length; i+= 3){ %>
-          <div class="snippet in pubDash" data-id='<%=snippets[i]._id%>'>
-            <h3 class="snippet">
-              <%= snippets[i].title %>
-            </h3>
-            <!-- leave this line on single line to keep formatting -->
-            <div class="wrapCode code"><%=decodeURIComponent(snippets[i]._id)%></div>
-            <!------------------------------------------------------->
-            <h4 class="snippet">
-              <%= snippets[i].language %>
-            </h4>
-            <p class="snippet">
-              <%= snippets[i].description %>
-            </p>
-          </div>
-        <% } %>
-      </div>
-      <div class="snippet out" id="snippetsContainer">
-        <!-- third column, loops through every third snippet starting at two -->
-        <% for(i = 2; i < snippets.length; i+= 3){ %>
-          <div class="snippet in pubDash" data-id='<%=snippets[i]._id%>'>
-            <h3 class="snippet">
-              <%= snippets[i].title %>
-            </h3>
-            <!-- leave this line on single line to keep formatting -->
-            <div class="wrapCode code"><%=decodeURIComponent(snippets[i].snippet)%></div>
-            <!------------------------------------------------------->
-            <h4 class="snippet">
-              <%= snippets[i].language %>
-            </h4>
-            <p class="snippet">
-              <%= snippets[i].description %>
-            </p>
           </div>
         <% } %>
       </div>
